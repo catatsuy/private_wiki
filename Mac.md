@@ -23,13 +23,12 @@
 
 `~/.bashrc`に
 
-###Emacs
-####インストール
+##Emacs
+###インストール
 
     EMACS_VER=24.2
     curl -O http://ftp.gnu.org/pub/gnu/emacs/emacs-${EMACS_VER}.tar.gz
-    svn co http://svn.sourceforge.jp/svnroot/macemacsjp/inline_patch/trunk
-    inline_patch
+    svn co http://svn.sourceforge.jp/svnroot/macemacsjp/inline_patch/trunk inline_patch
     tar xvfz emacs-${EMACS_VER}.tar.gz
     cd emacs-${EMACS_VER}
     patch -p0 < ../inline_patch/emacs-inline.patch
@@ -38,20 +37,20 @@
     make install
     open nextstep/Emacs.app
 
-####C-spaceがスポットライトのキーバインドと被っている 
+###C-spaceがスポットライトのキーバインドと被っている 
     林檎<システム環境設定<spotlight で変える
 
 
-###Eclipse
+##Eclipse
 ことえりのキーバインドがEclipseのキーバインドと衝突している
 
-###Java
+##Java
 Javaのデフォルトの文字コードがまさかのSHift JIS .bashrcに
 
     alias javac="javac -J-Dfile.encoding=UTF-8"
     alias java="java -Dfile.encoding=UTF-8"
 
-###TeX
+##TeX
 
 TeXLiveベースの[MacTeX](http://www.tug.org/mactex/)がある
 
