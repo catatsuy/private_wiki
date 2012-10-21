@@ -1,4 +1,4 @@
 private_wiki
 ============
 
-wiki
+wiki.catatsuy.orgのReplaceをしようと思います
