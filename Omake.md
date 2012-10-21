@@ -40,6 +40,13 @@
 
     sudo newaliases
 
+##MySQL
+
+###特定データベースにアクセスする権限を与える
+
+    grant all privileges on wordpress.* to 'wp_user'@'localhost' identified by 'wp_pass' with grant option;
+
+
 ##scss
 ###圧縮
 
