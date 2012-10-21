@@ -3,7 +3,7 @@
 ##インストール
 [UNetbootin](http://unetbootin.sourceforge.net/)を使うとUSBメモリからいけます
 
-##初期設定
+##設定
 
 ###ディレクトリ名を英語に
     LANG=C xdg-user-dirs-gtk-update
@@ -48,21 +48,24 @@ CapsLockをCtrlに
 とすると使えるようになる あらかじめブラウザから認証を通せば，設定時にパスワード等を記入する必要はない しかしこれだとrootから出た時に設定が消えてしまう
 
 ###設定ファイルなどを完全抹消する
+
     dpkg -l | grep *** 
     dpkg -P ***
 
-音楽を楽しむ
+###音楽を楽しむ
 
-音量を統一する
+####音量を統一する
+
     mp3gain -r -k -p *.mp3
 
-MP3タグを修正する
+####MP3タグを修正する
+
 MP3タグはWindowsから持ってくると文字コードがShift JISなので文字化けすることがある EasyTAGを使うと文字コードを変えることができる
 
-sudo apt-get install easytag
+    sudo apt-get install easytag
 
-フォント追加
-/.fonts/xxx.ttfとしてから
+###フォント追加
+`~/.fonts/xxx.ttf`としてから
 
     sudo fc-cache -fv ~/.fonts/
 
@@ -75,10 +78,12 @@ sudo apt-get install easytag
 
 ###雑多
 
-lha(lzh)ファイルを展開する
+####lha(lzh)ファイルを展開する
+
     sudo apt-get install lha-sjis 
 
-rarファイルを展開する
+####rarファイルを展開する
+
 rarファイルは圧縮形式だという認識はしてくれるが，展開はしてくれない
 
     sudo apt-get install unrar
