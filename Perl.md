@@ -7,4 +7,10 @@
     perlbrew install-cpanm
     
     cpanm --installdeps .
-    
+
+
+##デバッグ
+
+    use Data::Dumper;
+    warn Dumper($value);
+
