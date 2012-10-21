@@ -15,6 +15,14 @@
 
 を変更
 
+##lsのカラー
+なんかおかしい
+
+    export LSCOLORS=gxfxcxdxbxegedabagacad
+    alias ls='ls -G'
+
+`~/.bashrc`に
+
 ###Emacs
 ####インストール
 
