@@ -70,3 +70,10 @@ Javaのデフォルトの文字コードがまさかのSHift JIS .bashrcに
 
 TeXLiveベースの[MacTeX](http://www.tug.org/mactex/)がある
 
+## 小技
+
+Macの`open`コマンド便利
+
+    open `pwd`
+
+にalias貼っておくとカレントディレクトリが開いて便利
