@@ -74,6 +74,6 @@ TeXLiveベースの[MacTeX](http://www.tug.org/mactex/)がある
 
 Macの`open`コマンド便利
 
-    open `pwd`
+    open .
 
-にalias貼っておくとカレントディレクトリが開いて便利
+でカレントディレクトリが開く
