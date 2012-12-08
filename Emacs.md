@@ -111,6 +111,11 @@
     "Major mode for editing Markdown files" t)
     (setq auto-mode-alist
     (cons '("\\.md" . markdown-mode) auto-mode-alist))
+    
+    ;; linum-mode をいじって Emacs を高速化
+    (setq linum-delay t)
+    (defadvice linum-schedule (around my-linum-schedule () activate)
+    (run-with-idle-timer 0.2 nil #'linum-update-current))
 
 ##快適に日本語を入力する
 ibus-elをinstall後，`~/.Xresouces`に
