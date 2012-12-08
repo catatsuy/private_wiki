@@ -19,6 +19,8 @@
 
 で `~/.gitignore` に
 
+https://github.com/github/gitignore ここ参照
+
 ## ホームページの更新に使う
 `hooks/post-update`に
 
