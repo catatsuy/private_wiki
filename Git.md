@@ -1,22 +1,31 @@
-#Git
+# Git
 
-##設定
+## 設定
 
-###Gitのエディタをviに
+### Gitの初期設定
 
+    git config --global user.name "catatsuy"
+    git config --global user.emali "catatsuy@catatsuy.org"
     git config --global core.editor vi
+    git config --global color.ui auto
+    git config --global color.diff auto
+    git config --global color.status auto
+    git config --global color.branch auto
+    git config --global core.autocrlf input
 
-###共通のgitignore設定
+### 共通のgitignore設定
 
     git config --global core.excludesfile ~/.gitignore
 
-で`~/.gitignore`に
+で `~/.gitignore` に
 
-##ホームページの更新に使う
+https://github.com/github/gitignore ここ参照
+
+## ホームページの更新に使う
 `hooks/post-update`に
 
     #!/bin/sh
 
     (cd /ディレクトリ && git --git-dir=.git pull)
 
-それで指定のディレクトリでgit cloneしておく
+それで指定のディレクトリで `git clone` しておく
