@@ -125,6 +125,10 @@ aspellの設定をすれば`M-x ispell-buffer`で使えるはずだが，それ�
 
     lang en_US
 
+## ssh 先のファイルを開く
+
+    /ssh:user@example.com:/path/to/file
+
 ##PHP
 
 http://sourceforge.net/projects/php-mode/ 
