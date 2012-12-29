@@ -16,7 +16,14 @@
 
     ;; find-fileで大文字小文字を区別しない(Documentsのようにディレクトリ名の最初が大文字で始まっていても無視する)
     (setq read-file-name-completion-ignore-case t)
-
+    
+    ;; 編集時 buffer 再読み込み
+    (global-auto-revert-mode 1)
+    
+    ;; 同名ファイルのバッファ名の識別文字列を変更する
+    (require 'uniquify)
+    (setq uniquify-buffer-name-style 'post-forward-angle-brackets)
+    
     ;; Menuを隠す
     (custom-set-variables
     '(display-time-mode t)
