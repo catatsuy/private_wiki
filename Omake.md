@@ -1,6 +1,11 @@
 #おまけ
 
-##.ssh/config
+## ssh
+### 鍵生成
+
+    ssh-keygen -t rsa
+
+### .ssh/config
 
     Host catatsuy.org
       HostName catatsuy.org
