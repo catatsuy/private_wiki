@@ -46,6 +46,18 @@
 
     grant all privileges on wordpress.* to 'wp_user'@'localhost' identified by 'wp_pass' with grant option;
 
+## YAML
+
+### Ruby スクリプト
+
+    # -*- coding: utf-8 -*-
+    require 'yaml'
+    require 'pp'
+
+    str  = ARGF.read()      # 入力をすべて読み込む
+    data = YAML.load(str)   # パースする
+    pp data                 # データを表示する
+
 
 ##scss
 ###圧縮
