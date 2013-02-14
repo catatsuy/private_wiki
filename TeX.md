@@ -48,26 +48,7 @@ calcを読み込めば+-*/が使えるようになるのでA4の場合は
 
 ## YaTeX
 
-Emacsを使っているならYaTeXを使うとTeX文書の作成が楽になる apt-getでインストールするとTeX関連のものも推奨されてしまうのでYaTeXだけ入れたい場合は
-
-    sudo apt-get --no-install-recommends install yatex
-
-これで.emacsに
-
-    (setq auto-mode-alist
-    (cons (cons "\\.tex$" 'yatex-mode) auto-mode-alist))
-    (autoload 'yatex-mode "yatex" "Yet Another LaTeX mode" t)
-    (setq tex-command "platex")
-    (setq dvi2-command "xdvi %s.dvi")
-    (setq dviprint-command-format "dvipdfmx %s.dvi")
-    (setq YaTeX-use-LaTeX2e t)
-    (setq YaTeX-use-AMS-LaTeX t)
-
-と書けば文字コードはutf-8になり，.texファイルで自動でYaTeXモードになる Ubuntu10.10ではYaTeXのキーバインドが変わった
-
-    (setq YaTeX-inhibit-prefix-letter nil)
-
-と書けばもとに戻る
+https://github.com/catatsuy/dotfiles/blob/master/.emacs 参照
 
 `/work/template.tex` というファイルが存在すれば，テンプレートとして使用できる
 
@@ -196,8 +177,3 @@ listingsがいいが，日本語を扱うにはjlistingsが必要
     \usepackage[sc]{mathpazo}
     \usepackage[scaled]{beramono}
     \usepackage[scaled]{helvet}
-
-
-### template.tex
-
-/work/template.tex に置く
