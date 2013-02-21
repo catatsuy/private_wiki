@@ -6,7 +6,18 @@ TeXLive
 
 
 ## フォントを埋め込む
-`/usr/local/texlive/2011/texmf-dist/fonts/opentype/public` 以下にフォントをいれて
+`/usr/local/texlive/2011/texmf-dist/fonts/opentype/public` 以下にフォントを入れる
+
+Mac なら
+
+    sudo ln -fs "/Library/Fonts/ヒラギノ明朝 Pro W3.otf" ./HiraMinPro-W3.otf
+    sudo ln -fs "/Library/Fonts/ヒラギノ明朝 Pro W6.otf" ./HiraMinPro-W6.otf
+    sudo ln -fs "/Library/Fonts/ヒラギノ丸ゴ Pro W4.otf" ./HiraMaruPro-W4.otf
+    sudo ln -fs "/Library/Fonts/ヒラギノ角ゴ Pro W3.otf" ./HiraKakuPro-W3.otf
+    sudo ln -fs "/Library/Fonts/ヒラギノ角ゴ Pro W6.otf" ./HiraKakuPro-W6.otf
+    sudo ln -fs "/Library/Fonts/ヒラギノ角ゴ Std W8.otf" ./HiraKakuStd-W8.otf
+
+とやるとシンボリックリンクが貼られる
 
 ヒラギノの場合
 
@@ -14,7 +25,6 @@ TeXLive
 
 昔は.mapファイルを編集する必要があったが現在はupdmapを使うと非常に簡単にフォントの設定を変えることができる
 （もちろんマイナーなフォントの設定をする際は.mapファイルの編集は必要であるが） 詳しい使い方はhttp://tutimura.ath.cx/ptetex/?%A5%D5%A5%A9%A5%F3%A5%C8%A4%CE%BD%B8%C3%E6%B4%C9%CD%FD 参照
-
 
 ## ページ設定
 
