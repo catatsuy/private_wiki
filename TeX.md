@@ -123,7 +123,7 @@ dvi ware（日本の場合は十中八九dvipdfmx）にページサイズを指�
 
 本文
 
-    \kanjifamily{gt}
+    \renewcommand{\kanjifamilydefault}{\gtdefault}
     \setlength{\unitlength}{1truemm}
     \begin{picture}(91,55)(0,0)
     \put(x,y){}
@@ -136,6 +136,7 @@ dvi ware（日本の場合は十中八九dvipdfmx）にページサイズを指�
 
     \documentclass{jsarticle}
     \AtBeginDvi{\special{papersize=91truemm,55truemm}}
+    \renewcommand{\kanjifamilydefault}{\gtdefault}
     \usepackage[dvipdfm]{graphicx,pict2e}
     \usepackage[T1]{fontenc}
     \usepackage[utf8]{inputenc}
@@ -152,7 +153,6 @@ dvi ware（日本の場合は十中八九dvipdfmx）にページサイズを指�
     \setlength{\oddsidemargin}{-1truein}
     \setlength{\topmargin}{-1truein}
     \begin{document}
-    \kanjifamily{gt}
     \setlength{\unitlength}{1truemm}
         \begin{picture}(91,55)(0,0)
          \put(x,y){}
