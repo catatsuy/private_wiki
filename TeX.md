@@ -95,9 +95,12 @@ dvi ware（日本の場合は十中八九dvipdfmx）にページサイズを指�
 
 またフォントをお好みで
 
+    \renewcommand{\kanjifamilydefault}{\gtdefault}
     \usepackage[sc]{mathpazo}
     \usepackage[scaled=.8]{beramono}
     \usepackage[scaled=.8]{helvet}
+
+名刺はゴシック体が多いと思うので最初にゴシックにしています
 
 余白等の設定
 
@@ -114,13 +117,12 @@ dvi ware（日本の場合は十中八九dvipdfmx）にページサイズを指�
 
 本文
 
-    \renewcommand{\kanjifamilydefault}{\gtdefault}
     \setlength{\unitlength}{1truemm}
     \begin{picture}(91,55)(0,0)
     \put(x,y){}
     \end{picture}
 
-名刺はゴシック体が多いと思うので最初にゴシックにしています あとはpicture環境でゴリゴリやってください
+あとはpicture環境でゴリゴリやってください
 
 
 ### まとめ
