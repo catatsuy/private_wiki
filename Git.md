@@ -21,6 +21,16 @@
 
 https://github.com/github/gitignore ここ参照
 
+## Github で使う時の `.ssh/config`
+
+    Host github.com
+      HostName github.com
+      User git
+      IdentityFile ~/.ssh/id_rsa.github
+      TCPKeepAlive yes
+      IdentitiesOnly yes
+
+
 ## ホームページの更新に使う
 `hooks/post-update`に
 

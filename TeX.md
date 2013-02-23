@@ -1,12 +1,23 @@
-#TeX
+# TeX
 
-##インストール
+## インストール
 
 TeXLive
 
 
-##フォントを埋め込む
-`/usr/local/texlive/2011/texmf-dist/fonts/opentype/public` 以下にフォントをいれて
+## フォントを埋め込む
+`/usr/local/texlive/2011/texmf-dist/fonts/opentype/public` 以下にフォントを入れる
+
+Mac なら
+
+    sudo ln -fs "/Library/Fonts/ヒラギノ明朝 Pro W3.otf" ./HiraMinPro-W3.otf
+    sudo ln -fs "/Library/Fonts/ヒラギノ明朝 Pro W6.otf" ./HiraMinPro-W6.otf
+    sudo ln -fs "/Library/Fonts/ヒラギノ丸ゴ Pro W4.otf" ./HiraMaruPro-W4.otf
+    sudo ln -fs "/Library/Fonts/ヒラギノ角ゴ Pro W3.otf" ./HiraKakuPro-W3.otf
+    sudo ln -fs "/Library/Fonts/ヒラギノ角ゴ Pro W6.otf" ./HiraKakuPro-W6.otf
+    sudo ln -fs "/Library/Fonts/ヒラギノ角ゴ Std W8.otf" ./HiraKakuStd-W8.otf
+
+とやるとシンボリックリンクが貼られる
 
 ヒラギノの場合
 
@@ -15,8 +26,7 @@ TeXLive
 昔は.mapファイルを編集する必要があったが現在はupdmapを使うと非常に簡単にフォントの設定を変えることができる
 （もちろんマイナーなフォントの設定をする際は.mapファイルの編集は必要であるが） 詳しい使い方はhttp://tutimura.ath.cx/ptetex/?%A5%D5%A5%A9%A5%F3%A5%C8%A4%CE%BD%B8%C3%E6%B4%C9%CD%FD 参照
 
-
-##ページ設定
+## ページ設定
 
 TeXはWordなどでいうページ設定が難しいとよく言われる
 何も設定しなくても上と左に1インチの余白で，そして下と右の余白は設定できない
@@ -26,7 +36,7 @@ TeXはWordなどでいうページ設定が難しいとよく言われる
 だから日本語一文字の幅であるzwの整数倍で設定すればよい
 つまり`\setlength{\textwidth}{40zw}`のようにする
 
-###calcパッケージを利用する
+### calcパッケージを利用する
 calcを読み込めば+-*/が使えるようになるのでA4の場合は
 
     \setlength{\oddsidemargin}{(210truemm-\textwidth)/2-1truein}
@@ -46,45 +56,26 @@ calcを読み込めば+-*/が使えるようになるのでA4の場合は
 
 みたいな感じで設定すると楽(微調整必須)
 
-##YaTeX
+## YaTeX
 
-Emacsを使っているならYaTeXを使うとTeX文書の作成が楽になる apt-getでインストールするとTeX関連のものも推奨されてしまうのでYaTeXだけ入れたい場合は
-
-    sudo apt-get --no-install-recommends install yatex
-
-これで.emacsに
-
-    (setq auto-mode-alist
-    (cons (cons "\\.tex$" 'yatex-mode) auto-mode-alist))
-    (autoload 'yatex-mode "yatex" "Yet Another LaTeX mode" t)
-    (setq tex-command "platex")
-    (setq dvi2-command "xdvi %s.dvi")
-    (setq dviprint-command-format "dvipdfmx %s.dvi")
-    (setq YaTeX-use-LaTeX2e t)
-    (setq YaTeX-use-AMS-LaTeX t)
-
-と書けば文字コードはutf-8になり，.texファイルで自動でYaTeXモードになる Ubuntu10.10ではYaTeXのキーバインドが変わった
-
-    (setq YaTeX-inhibit-prefix-letter nil)
-
-と書けばもとに戻る
+https://github.com/catatsuy/dotfiles/blob/master/.emacs 参照
 
 `/work/template.tex` というファイルが存在すれば，テンプレートとして使用できる
 
 
-##TeXで簡単に表を使う
+## TeXで簡単に表を使う
 
 TeXで表を扱うならCalc2LaTeXを使うとよい 変換後微調整が必要なことが多いので，今後の変更を考えてどう微調整したのかをコメントに書くなり，量が多い場合スクリプトを作ったほうが良いかもしれない
 
 
-##パッケージをインストール
+## パッケージをインストール
 
     /usr/local/texlive/2011/texmf-dist/tex/platex/
 
 ls-Rを使っているならmktexlsrを忘れずに
 
 
-##TeXで名刺を作ろう！
+## TeXで名刺を作ろう！
 
 dvi wareにページサイズを指定する
 dvi ware（日本の場合は十中八九dvipdfmx）にページサイズを指定しなけれ ば，pdfにしたときにサイズがおかしくなる A4などのメジャーなものであれば新ドキュメントクラスならpapersizeオプションで出来るのだが，名刺など特殊なサイズだと指定できないので
@@ -132,7 +123,7 @@ dvi ware（日本の場合は十中八九dvipdfmx）にページサイズを指�
 名刺はゴシック体が多いと思うので最初にゴシックにしています あとはpicture環境でゴリゴリやってください
 
 
-###まとめ
+### まとめ
 
     \documentclass{jsarticle}
     \AtBeginDvi{\special{papersize=91truemm,55truemm}}
@@ -160,13 +151,13 @@ dvi ware（日本の場合は十中八九dvipdfmx）にページサイズを指�
     \end{document}
 
 
-##おまけ
+## おまけ
 
-###epsファイルをpdfに
+### epsファイルをpdfに
 
     ps2pdf -dEPSCrop -dPDFA -sProcessColorModel#DeviceCMYK -dPDFSETTINGS#/prepress
 
-###プログラムをかく
+### プログラムをかく
 
 listingsがいいが，日本語を扱うにはjlistingsが必要
 
@@ -187,7 +178,7 @@ listingsがいいが，日本語を扱うにはjlistingsが必要
     \end{lstlisting}
     \lstinputlisting[caption=~~~~,language=java]{~~.java}
 
-###行間
+### 行間
 
     \renewcommand{\baselinestretch}{.8}
 
@@ -196,34 +187,3 @@ listingsがいいが，日本語を扱うにはjlistingsが必要
     \usepackage[sc]{mathpazo}
     \usepackage[scaled]{beramono}
     \usepackage[scaled]{helvet}
-
-
-###template.tex
-
-/work/template.tex に置く
-
-    \documentclass[a4paper,papersize,12Q]{jsarticle}
-    \usepackage[T1]{fontenc}
-    \usepackage[utf8]{inputenc}
-    \usepackage{lmodern}
-    \usepackage[sc]{mathpazo}
-    \usepackage[scaled]{helvet}
-    \usepackage[scaled]{beramono}
-    \usepackage[dvipdfmx]{emathP}
-    \setlength{\textheight}{47\baselineskip+\topskip}
-    \setlength{\topmargin}{(297truemm-\textheight)/2-1truein-1truecm}
-    \setlength{\textwidth}{47zw}
-    \setlength{\oddsidemargin}{(210truemm-\textwidth)/2-1truein}
-    \let\MARU\relax
-    \usepackage[deluxe,expert]{otf}
-    \usepackage{textcomp,okumacro}
-    \begin{document}
-
-
-    \end{document}
-
-超個人的な設定 普通の環境では処理できません
-注意事項
-
-emathとokumacroが\MARUで衝突している
-基本的にこのまま使うことはあまりありません
