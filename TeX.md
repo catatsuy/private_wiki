@@ -164,13 +164,13 @@ dvi ware（日本の場合は十中八九dvipdfmx）にページサイズを指�
 listingsがいいが，日本語を扱うにはjlistingsが必要
 
     \usepackage[final]{listings}
-    \lstset{%listingsの設定
-    numbers=left,%行番号を左
-    numberstyle=\scriptsize,%
-    stepnumber=1,%1行おきに行番号を
-    numbersep=1zw,%ソースと行番号の間隔
-    lineskip=-0.5zw,%行間隔 要調整
-    basicstyle=\ttfamily%ttfamily
+    \lstset{                 %listingsの設定
+    numbers=left,            %行番号を左
+    numberstyle=\scriptsize, %
+    stepnumber=1,            %1行おきに行番号を
+    numbersep=1zw,           %ソースと行番号の間隔
+    lineskip=-0.5zw,         %行間隔 要調整
+    basicstyle=\ttfamily     %ttfamily
     }
 
 使い方
@@ -179,6 +179,10 @@ listingsがいいが，日本語を扱うにはjlistingsが必要
     ~~
     \end{lstlisting}
     \lstinputlisting[caption=~~~~,language=java]{~~.java}
+
+### リンク
+
+    \usepackage[dvipdfm,bookmarks=false,bookmarksnumbered=false,colorlinks=false]{hyperref}
 
 ### 行間
 
