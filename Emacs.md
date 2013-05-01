@@ -1,7 +1,7 @@
 # Emacs
 ## .emacs
 
-https://github.com/catatsuy/dotfiles/blob/master/.emacs
+https://github.com/catatsuy/dot.emacs.d
 
 参照
 
@@ -23,15 +23,4 @@ aspell の設定をすれば `M-x ispell-buffer` で使えるはずだが，そ�
 ## ssh 先のファイルを開く
 
     /ssh:user@example.com:/path/to/file
-
-## PHP
-
-http://sourceforge.net/projects/php-mode/ 
-
-`M-x byte-compile` してから
-
-    (autoload 'php-mode "php-mode" "Major mode for editing php code." t)
-    (add-to-list 'auto-mode-alist '("\\.php$" . php-mode))
-    (add-to-list 'auto-mode-alist '("\\.inc$" . php-mode))
-    
 
