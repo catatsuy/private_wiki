@@ -16,6 +16,8 @@
       HostName github.com
       User git
       IdentityFile ~/.ssh/id_rsa.github
+      Compression yes
+      Ciphers arcfour256
       TCPKeepAlive yes
       IdentitiesOnly yes
 
