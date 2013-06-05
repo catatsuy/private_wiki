@@ -1,11 +1,6 @@
 # Emacs
-## .emacs
 
-https://github.com/catatsuy/dot.emacs.d
-
-参照
-
-## 快適に日本語を入力する
+## Ubuntu で快適に日本語を入力する
 
 ibus-elをinstall後，`~/.Xresouces`に
 

@@ -5,22 +5,6 @@
 
     ssh-keygen -t rsa
 
-### .ssh/config
-
-    Host catatsuy.org
-      HostName catatsuy.org
-      IdentityFile ~/.ssh/id_rsa.catatsuy.org
-      User xxxxxx
-      Port xxxxxx 
-    Host github.com
-      HostName github.com
-      User git
-      IdentityFile ~/.ssh/id_rsa.github
-      Compression yes
-      Ciphers arcfour256
-      TCPKeepAlive yes
-      IdentitiesOnly yes
-
 ## お手軽サーバー
 
     python -m SimpleHTTPServer 8080
@@ -47,9 +31,9 @@
 
     sudo newaliases
 
-##MySQL
+## MySQL
 
-###特定データベースにアクセスする権限を与える
+### 特定データベースにアクセスする権限を与える
 
     grant all privileges on wordpress.* to 'wp_user'@'localhost' identified by 'wp_pass' with grant option;
 
@@ -66,8 +50,8 @@
     pp data                 # データを表示する
 
 
-##scss
-###圧縮
+## scss
+### 圧縮
 
     sass --style compressed style.scss:style.css
 

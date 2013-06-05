@@ -1,14 +1,6 @@
 # Mac
 
-## Macの設定で注意/変更すべきこと
-
-###  CapsLock/Ctrl/Command周りの設定変更 
-
-    林檎<キーボード<マウス<修飾キー
-
-ただしこの設定は某工大の計算機室だとiMacと自分のアカウントに紐づいた設定になるらしく，以前に使ったiMacでない限り設定は引き継がれない
-
-## Macのキーバインド 
+## IME 切り替えのキーバインド
 
 ことえりを日本語にするのはC-Shift-j，英語はC-Shift-;
 変更する場合は
@@ -52,17 +44,9 @@ aspellを使う
 
     林檎<システム環境設定<spotlight で変える
 
-
 ## Eclipse
 
 ことえりのキーバインドがEclipseのキーバインドと衝突している
-
-## Java
-
-Javaのデフォルトの文字コードがまさかのSHift JIS .bashrcに
-
-    alias javac="javac -J-Dfile.encoding=UTF-8"
-    alias java="java -Dfile.encoding=UTF-8"
 
 ## 小技
 

@@ -1,11 +1,9 @@
-#Android
+# Android
 
-##Android SDK
-###インストール 
-http://developer.android.com/sdk/ 参照
+## Android SDK
 
+### UbuntuにてXperiaをデバッグモードできるようにする
 
-###UbuntuにてXperiaをデバッグモードできるようにする 
 `/etc/udev/rules.d/` に `51-android.rules` というファイル名のものを作成して
 
     SUBSYSTEM=="usb", ATTRS{idVendor}=="0fce", MODE="0666"
@@ -38,7 +36,8 @@ http://developer.android.com/sdk/ 参照
 
 みたいな表示に変わるまでやる
 
-###ネットに繋がらないとき 
+### ネットに繋がらないとき
+
 dnsをGoogleのやつにしてしまう adb shellして
 
     setprop net.dns1 8.8.8.8

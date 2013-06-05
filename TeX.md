@@ -4,7 +4,6 @@
 
 TeXLive
 
-
 ## フォントを埋め込む
 
 `/usr/local/texlive/2011/texmf-dist/fonts/opentype/public` 以下にフォントを入れる
@@ -24,8 +23,7 @@ Mac なら
 
     updmap --setoption kanjiEmbed hiragino
 
-昔は.mapファイルを編集する必要があったが現在はupdmapを使うと非常に簡単にフォントの設定を変えることができる
-（もちろんマイナーなフォントの設定をする際は.mapファイルの編集は必要であるが） 詳しい使い方は http://tutimura.ath.cx/ptetex/?%A5%D5%A5%A9%A5%F3%A5%C8%A4%CE%BD%B8%C3%E6%B4%C9%CD%FD 参照
+詳しい使い方： http://tutimura.ath.cx/ptetex/?%A5%D5%A5%A9%A5%F3%A5%C8%A4%CE%BD%B8%C3%E6%B4%C9%CD%FD
 
 ## ページ設定
 
@@ -44,11 +42,13 @@ calcを読み込めば+-*/が使えるようになるのでA4の場合は
     \setlength{\oddsidemargin}{(210truemm-\textwidth)/2-1truein}
 
 とすればちょうどど真ん中にテキストがくるようになる textheightを何行と指定する
+
 例えば30行なら
 
     \setlength{\textheight}{29\baselineskip+\topskip}
 
 とすれば30行になったと思う
+
 まとめ
 
     \setlength{\textheight}{29\baselineskip+\topskip}
@@ -58,32 +58,11 @@ calcを読み込めば+-*/が使えるようになるのでA4の場合は
 
 みたいな感じで設定すると楽(微調整必須)
 
-## YaTeX
-
-https://github.com/catatsuy/dot.emacs.d/blob/master/inits/40-yatex.el 参照
-
-`/work/template.tex` というファイルが存在すれば，テンプレートとして使用できる
-
-
-## TeXで簡単に表を使う
-
-TeXで表を扱うならCalc2LaTeXを使うとよい 変換後微調整が必要なことが多いので，今後の変更を考えてどう微調整したのかをコメントに書くなり，量が多い場合スクリプトを作ったほうが良いかもしれない
-
-
 ## パッケージをインストール
 
     /usr/local/texlive/2011/texmf-dist/tex/platex/
 
 ls-Rを使っているならmktexlsrを忘れずに
-
-
-## TeXで名刺を作ろう！
-
-参考：
-
-https://speakerdeck.com/catatsuy/sore-latex-dedekiruyo
-
-https://github.com/catatsuy/namecard_sample
 
 ## おまけ
 

@@ -1,14 +1,5 @@
 #Perl
 
-## plenv
-
-    git clone git://github.com/tokuhirom/plenv.git ~/.plenv
-    exec $SHELL -l
-    plenv available
-    plenv install 5.*.*
-    plenv install-cpanm
-
-
 ## Perlbrew
 
     curl -L http://xrl.us/perlbrewinstall | bash
@@ -17,6 +8,8 @@
     perlbrew install-cpanm
     
     cpanm --installdeps .
+
+今は plenv の方がおすすめ
 
 
 ## デバッグ
