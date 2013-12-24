@@ -14,6 +14,12 @@
     git config --global merge.ff false
     git config --global core.autocrlf input
 
+色指定のエスケープシーケンスが文字化けするならページャーの設定をする
+
+    git config --global core.pager "lv -c"
+
+とかにする
+
 ### 共通のgitignore設定
 
     git config --global core.excludesfile ~/.gitignore
