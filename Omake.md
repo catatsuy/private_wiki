@@ -31,6 +31,12 @@
 
     sudo newaliases
 
+## screen
+
+デタッチされている screen を一括削除
+
+    rm -rf /var/run/screen/S-ユーザ名/*
+
 ## MySQL
 
 ### 特定データベースにアクセスする権限を与える
