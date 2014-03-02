@@ -1,6 +1,7 @@
 #おまけ
 
 ## ssh
+
 ### 鍵生成
 
     ssh-keygen -t rsa
@@ -11,7 +12,7 @@
 
 ## Basic認証
 .htaccess
- 
+
     AuthType Basic
     AuthName "メッセージ"
     AuthUserFile ファイルの場所
@@ -24,7 +25,7 @@
 ## postfix
 ### alias
 `/etc/aliases` にて
-    
+
     名前: 別名
 
 そして
@@ -54,10 +55,3 @@
     str  = ARGF.read()      # 入力をすべて読み込む
     data = YAML.load(str)   # パースする
     pp data                 # データを表示する
-
-
-## scss
-### 圧縮
-
-    sass --style compressed style.scss:style.css
-
