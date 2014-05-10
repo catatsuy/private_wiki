@@ -6,38 +6,19 @@
 
     git config --global user.name "catatsuy"
     git config --global user.emali "catatsuy@catatsuy.org"
-    git config --global core.editor vi
-    git config --global color.ui auto
-    git config --global color.diff auto
-    git config --global color.status auto
-    git config --global color.branch auto
-    git config --global merge.ff false
-    git config --global core.autocrlf input
 
-色指定のエスケープシーケンスが文字化けするならページャーの設定をする
+### gitignore
 
-    git config --global core.pager "lv -c"
-
-とかにする
-
-### 共通のgitignore設定
-
-    git config --global core.excludesfile ~/.gitignore
-
-で `~/.gitignore` に
-
-https://github.com/github/gitignore ここ参照
+https://github.com/github/gitignore
 
 ## Github で使う時の `.ssh/config`
 
     Host github.com
       HostName github.com
       User git
+      Port 22
       IdentityFile ~/.ssh/id_rsa.github
-      TCPKeepAlive yes
-      IdentitiesOnly yes
       Compression yes
-      Ciphers arcfour256
 
 ## ホームページの更新に使う
 
