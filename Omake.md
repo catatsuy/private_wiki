@@ -1,15 +1,5 @@
 #おまけ
 
-## ssh
-
-### 鍵生成
-
-    ssh-keygen -t rsa
-
-## お手軽サーバー
-
-    python -m SimpleHTTPServer 8080
-
 ## Basic認証
 .htaccess
 
