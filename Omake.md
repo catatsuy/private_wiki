@@ -1,6 +1,7 @@
 #おまけ
 
 ## Basic認証
+
 .htaccess
 
     AuthType Basic
@@ -10,7 +11,9 @@
 
 ## htpasswd
 
-    htpasswd -c ファイル名 ユーザ名
+    openssl passwd パスワード
+
+user:pass って感じで書く
 
 ## postfix
 ### alias
