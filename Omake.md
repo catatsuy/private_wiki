@@ -12,6 +12,10 @@
 ## htpasswd
 
     openssl passwd パスワード
+    
+8文字以上の場合はMD5にする
+
+    openssl passwd -1 パスワード
 
 user:pass って感じで書く
 
